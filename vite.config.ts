@@ -7,6 +7,11 @@ export default defineConfig({
   base: '/', // This is crucial for GitHub Pages with username.github.io repos
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
