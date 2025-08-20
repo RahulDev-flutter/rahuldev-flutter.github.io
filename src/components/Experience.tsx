@@ -5,8 +5,8 @@ const Experience: React.FC = () => {
   const experiences = [
     {
       title: 'Senior Flutter Developer',
-      company: 'Almond AI',
-      location: 'Remote',
+      company: 'Tech Almond AI',
+      location: '1214, Tower-A, SPAZE ITECH PARK, Block S, Sector 49, Gurugram, Haryana 122018',
       period: 'March 2024 - Present',
       description: 'Leading development team to deliver high-quality mobile applications with advanced Flutter implementations and performance optimizations.',
       technologies: ['Flutter', 'Dart', 'Team Leadership', 'UI/UX', 'Performance Optimization'],
@@ -20,7 +20,7 @@ const Experience: React.FC = () => {
     {
       title: 'Senior Flutter Developer',
       company: 'AVC Dotty LLP',
-      location: 'Remote',
+      location: 'C-157, Janak Cinema Community Center Janakpuri Janak Cinema Community Center, 110056, Janakpuri, New Delhi, Delhi, 110056',
       period: 'September 2023 - February 2024',
       description: 'Developed product-based mobile applications using Flutter framework with focus on cross-functional collaboration and feature implementation.',
       technologies: ['Flutter', 'Dart', 'Product Development', 'Cross-functional Teams'],
@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
     {
       title: 'Flutter Developer',
       company: 'Codewire Tech PVT. LTD.',
-      location: 'Remote',
+      location: 'Office No: 7, 3rd floor, Amartex building, Sector-19, Behind Badkhal Mor Metro Station, Faridabad, Haryana 121002',
       period: 'September 2022 - September 2023',
       description: 'Built scalable applications using object-oriented programming principles with focus on code quality and performance improvements.',
       technologies: ['Flutter', 'Dart', 'OOP', 'Code Reviews', 'Testing', 'Bug Fixing'],
@@ -48,7 +48,7 @@ const Experience: React.FC = () => {
     {
       title: 'Junior Flutter Developer',
       company: 'Soumya Technology',
-      location: 'Remote',
+      location: 'Balaji Vihar, near Tejal College Bheru ji Mod, Reengus, Rajasthan 332404',
       period: 'January 2021 - September 2022',
       description: 'Started as trainee and advanced to junior developer through proven performance, developing foundational skills in Flutter development.',
       technologies: ['Flutter', 'Dart', 'Mobile Architecture', 'Project Deployment'],
