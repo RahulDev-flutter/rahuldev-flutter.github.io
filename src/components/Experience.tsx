@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Users, Code, Zap, Award } from 'lucide-react';
+import { Calendar, MapPin, Users, Code, Zap, Award, Briefcase } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const experiences = [
@@ -62,15 +62,25 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 relative z-10">
+    <section id="experience" className="py-16 md:py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-          Professional Experience
-        </h2>
+        {/* Section Header */}
+        <div className="text-center mb-10 md:mb-16">
+          <div className="inline-block px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent-light text-xs md:text-sm font-medium mb-3 md:mb-4 animate-fade-in-up">
+            <span>My Journey</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold font-heading animate-fade-in-up animation-delay-300 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            Professional Experience
+          </h2>
+          <p className="text-sm md:text-base mt-3 md:mt-4 text-text-muted max-w-2xl mx-auto animate-fade-in-up animation-delay-500">
+            My professional path and career highlights
+          </p>
+        </div>
         
-        <div className="relative">
+        {/* Desktop Timeline */}
+        <div className="relative hidden md:block">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-400 via-blue-500 to-purple-600 hidden md:block"></div>
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-400 via-blue-500 to-purple-600"></div>
           
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -80,15 +90,15 @@ const Experience: React.FC = () => {
                 style={{ animationDelay: `${index * 300}ms` }}
               >
                 {/* Timeline dot */}
-                <div className={`absolute left-6 w-4 h-4 bg-gradient-to-r from-${exp.color}-400 to-${exp.color}-600 rounded-full border-4 border-slate-900 hidden md:block group-hover:scale-125 transition-transform duration-300`}></div>
+                <div className={`absolute left-6 w-4 h-4 bg-gradient-to-r from-${exp.color}-400 to-${exp.color}-600 rounded-full border-4 border-slate-900 group-hover:scale-125 transition-transform duration-300`}></div>
                 
-                <div className="md:ml-20 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-emerald-400/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/10">
+                <div className="ml-20 bg-background-light/50 backdrop-blur-sm rounded-2xl p-8 border border-background-lighter hover:border-accent/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-accent/10">
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
-                      <div className="flex items-center space-x-4 text-gray-400 mb-4">
+                      <h3 className="text-2xl font-bold text-text font-heading mb-2">{exp.title}</h3>
+                      <div className="flex items-center space-x-4 text-text-muted mb-4">
                         <span className={`text-${exp.color}-400 font-semibold flex items-center space-x-1`}>
-                          <Users size={16} />
+                          <Briefcase size={16} />
                           <span>{exp.company}</span>
                         </span>
                         <div className="flex items-center space-x-1">
@@ -103,16 +113,16 @@ const Experience: React.FC = () => {
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">{exp.description}</p>
+                  <p className="text-text-light mb-6 leading-relaxed">{exp.description}</p>
                   
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center space-x-2">
+                    <h4 className="text-lg font-semibold text-text mb-3 flex items-center space-x-2">
                       <Award className={`text-${exp.color}-400`} size={20} />
                       <span>Key Achievements:</span>
                     </h4>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start space-x-2 text-gray-300">
+                        <li key={i} className="flex items-start space-x-2 text-text-light">
                           <div className={`w-2 h-2 bg-${exp.color}-400 rounded-full mt-2 flex-shrink-0`}></div>
                           <span>{achievement}</span>
                         </li>
@@ -121,7 +131,7 @@ const Experience: React.FC = () => {
                   </div>
                   
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center space-x-2">
+                    <h4 className="text-lg font-semibold text-text mb-3 flex items-center space-x-2">
                       <Code className={`text-${exp.color}-400`} size={20} />
                       <span>Technologies Used:</span>
                     </h4>
@@ -129,7 +139,7 @@ const Experience: React.FC = () => {
                       {exp.technologies.map((tech, i) => (
                         <span 
                           key={i}
-                          className={`px-3 py-1 bg-slate-700 text-${exp.color}-400 rounded-full text-sm font-medium hover:bg-${exp.color}-400 hover:text-slate-900 transition-colors duration-300`}
+                          className={`px-3 py-1 bg-background text-${exp.color}-400 rounded-full text-sm font-medium hover:bg-${exp.color}-400 hover:text-background transition-colors duration-300`}
                         >
                           {tech}
                         </span>
@@ -140,6 +150,69 @@ const Experience: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+        
+        {/* Mobile Timeline */}
+        <div className="md:hidden space-y-8">
+          {experiences.map((exp, index) => (
+            <div 
+              key={index}
+              className="relative animate-fade-in-up bg-background-light/50 backdrop-blur-sm rounded-xl p-5 border border-background-lighter hover:border-accent/50 transition-all duration-300"
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
+              <div className="flex flex-col mb-4">
+                <h3 className="text-xl font-bold text-text font-heading mb-2">{exp.title}</h3>
+                <div className="flex flex-col space-y-2 text-sm text-text-muted">
+                  <span className={`text-${exp.color}-400 font-semibold flex items-center space-x-1`}>
+                    <Briefcase size={14} />
+                    <span>{exp.company}</span>
+                  </span>
+                  <div className="flex items-center space-x-1">
+                    <MapPin size={14} />
+                    <span className="text-xs">{exp.location}</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <Calendar size={14} />
+                    <span>{exp.period}</span>
+                  </div>
+                </div>
+              </div>
+              
+              <p className="text-sm text-text-light mb-4 leading-relaxed">{exp.description}</p>
+              
+              <div className="mb-4">
+                <h4 className="text-base font-semibold text-text mb-2 flex items-center space-x-2">
+                  <Award className={`text-${exp.color}-400`} size={16} />
+                  <span>Key Achievements:</span>
+                </h4>
+                <ul className="space-y-1.5">
+                  {exp.achievements.map((achievement, i) => (
+                    <li key={i} className="flex items-start space-x-2 text-sm text-text-light">
+                      <div className={`w-1.5 h-1.5 bg-${exp.color}-400 rounded-full mt-1.5 flex-shrink-0`}></div>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-base font-semibold text-text mb-2 flex items-center space-x-2">
+                  <Code className={`text-${exp.color}-400`} size={16} />
+                  <span>Technologies:</span>
+                </h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {exp.technologies.map((tech, i) => (
+                    <span 
+                      key={i}
+                      className={`px-2 py-0.5 bg-background text-${exp.color}-400 rounded-full text-xs font-medium hover:bg-${exp.color}-400 hover:text-background transition-colors duration-300`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
