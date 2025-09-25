@@ -24,6 +24,11 @@ export default {
           light: 'var(--background-light)',
           lighter: 'var(--background-lighter)',
         },
+        text: {
+          DEFAULT: 'var(--text)',
+          light: 'var(--text-light)',
+          muted: 'var(--text-muted)',
+        },
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],

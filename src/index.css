@@ -35,8 +35,8 @@ body {
   --background-light: #1e293b; /* slate-800 */
   --background-lighter: #334155; /* slate-700 */
   --text: #ffffff; /* white */
-  --text-light: #ffffff; /* white */
-  --text-muted: #ffffff; /* white */
+  --text-light: #e2e8f0; /* slate-200 - better contrast for light text */
+  --text-muted: #cbd5e1; /* slate-300 - better contrast for muted text */
 }
 
 /* Custom Animations */
@@ -409,4 +409,95 @@ input:focus, textarea:focus {
 ::-moz-selection {
   background-color: rgba(6, 182, 212, 0.3);
   color: white;
+}
+
+/* Ensure all text and icons are white/light in dark theme */
+body, html {
+  color: white !important;
+}
+
+/* Override any potential black text */
+* {
+  color: inherit;
+}
+
+/* Ensure all text elements have proper color inheritance */
+h1, h2, h3, h4, h5, h6, p, span, div, a, button, li, td, th {
+  color: inherit;
+}
+
+/* Force white color for any potentially black text */
+.text-black {
+  color: white !important;
+}
+
+/* Ensure lucide icons are always visible */
+svg {
+  color: inherit !important;
+}
+
+/* Make sure all button and link text is visible */
+button, a {
+  color: inherit;
+}
+
+/* Specific overrides for common text utilities */
+.text-gray-900, .text-gray-800, .text-gray-700, .text-black {
+  color: white !important;
+}
+
+.text-gray-600, .text-gray-500 {
+  color: #cbd5e1 !important; /* slate-300 */
+}
+
+.text-gray-400, .text-gray-300 {
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+/* Additional overrides for better visibility */
+.fill-current {
+  fill: currentColor !important;
+}
+
+.stroke-current {
+  stroke: currentColor !important;
+}
+
+/* Ensure icons from lucide-react are always visible */
+[data-lucide] {
+  color: inherit !important;
+}
+
+/* Override any potential dark text from third-party libraries */
+.dark\:text-white {
+  color: white !important;
+}
+
+/* Force visibility for any remaining dark elements */
+[class*="text-slate-900"],
+[class*="text-slate-800"],
+[class*="text-slate-700"],
+[class*="text-gray-900"],
+[class*="text-gray-800"],
+[class*="text-gray-700"],
+[class*="text-neutral-900"],
+[class*="text-neutral-800"],
+[class*="text-zinc-900"],
+[class*="text-zinc-800"] {
+  color: white !important;
+}
+
+/* Ensure proper contrast for muted text */
+[class*="text-slate-600"],
+[class*="text-slate-500"],
+[class*="text-gray-600"],
+[class*="text-gray-500"] {
+  color: #cbd5e1 !important; /* slate-300 */
+}
+
+[class*="text-slate-400"],
+[class*="text-slate-300"],
+[class*="text-gray-400"],
+[class*="text-gray-300"] {
+  color: #e2e8f0 !important; /* slate-200 */
 }
