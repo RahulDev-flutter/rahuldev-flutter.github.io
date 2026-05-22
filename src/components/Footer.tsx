@@ -1,19 +1,13 @@
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/yourusername', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:contact@example.com', label: 'Email' }
+    { icon: Github, href: 'https://github.com/RahulDev-flutter', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/rvofficials', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:rahulverma0549@gmail.com', label: 'Email' },
   ];
 
   const navLinks = [
@@ -21,81 +15,82 @@ const Footer: React.FC = () => {
     { href: '#skills', label: 'Skills' },
     { href: '#experience', label: 'Experience' },
     { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' }
+    { href: '#contact', label: 'Contact' },
   ];
 
   return (
-    <footer className="pt-12 md:pt-20 pb-6 md:pb-10 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back to top button */}
-        <div className="flex justify-center mb-8 md:mb-12">
-          <button 
-            onClick={scrollToTop}
-            className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-all duration-300 transform hover:-translate-y-1 focus:outline-none"
-            aria-label="Back to top"
-          >
-            <ArrowUp size={18} className="md:size-20" />
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-8 md:mb-12 border-b border-background-lighter pb-8 md:pb-12">
-          {/* Logo and Description */}
-          <div className="flex flex-col items-center md:items-start">
-            <div className="text-xl md:text-2xl font-bold font-heading text-text mb-3 md:mb-4">Rahul Vishwakarma</div>
-            <p className="text-sm md:text-base text-text-muted text-center md:text-left mb-4 md:mb-6 max-w-xs">
-              A passionate Flutter developer creating beautiful, high-performance mobile applications.  
-            </p>
-            {/* Social Links */}
-            <div className="flex space-x-3 md:space-x-4">
-              {socialLinks.map((social) => (
-                <a 
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-background-light flex items-center justify-center text-text-muted hover:bg-primary/10 hover:text-primary transition-all duration-300"
-                  aria-label={social.label}
-                >
-                  <social.icon size={16} className="md:size-18" />
-                </a>
-              ))}
+    <footer className="relative border-t border-border mt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Top: large mark */}
+        <div className="grid md:grid-cols-12 gap-10 pb-10 border-b border-border">
+          <div className="md:col-span-5">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-md bg-accent text-bg flex items-center justify-center font-mono font-bold">
+                rv
+              </div>
+              <div>
+                <div className="font-heading text-fg text-xl">Rahul Verma</div>
+                <div className="font-mono text-xs text-fg-subtle">@RahulDev-flutter</div>
+              </div>
             </div>
+            <p className="text-fg-muted max-w-md leading-relaxed">
+              Senior Flutter Developer building high-performance mobile apps with
+              clean architecture, Bloc, and Firebase.
+            </p>
+            <button
+              onClick={scrollToTop}
+              className="mt-6 group inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border-strong text-fg-muted hover:text-accent hover:border-accent transition-all"
+            >
+              <ArrowUp size={14} className="group-hover:-translate-y-0.5 transition-transform" />
+              <span className="text-xs">Back to top</span>
+            </button>
           </div>
-          
-          {/* Quick Links */}
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-base md:text-lg font-semibold text-text mb-4 md:mb-6 font-heading">Quick Links</h3>
-            <nav className="flex flex-col space-y-2 md:space-y-3">
-              {navLinks.map((link) => (
-                <a 
-                  key={link.label}
-                  href={link.href} 
-                  className="text-sm md:text-base text-text-muted hover:text-primary transition-colors duration-300"
-                >
-                  {link.label}
+
+          <div className="md:col-span-3">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-fg-subtle mb-4">Sitemap</div>
+            <nav className="flex flex-col gap-2">
+              {navLinks.map((l) => (
+                <a key={l.label} href={l.href} className="text-fg-muted hover:text-accent transition-colors text-sm">
+                  {l.label}
                 </a>
               ))}
             </nav>
           </div>
-          
-          {/* Contact Info */}
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-base md:text-lg font-semibold text-text mb-4 md:mb-6 font-heading">Contact Info</h3>
-            <div className="space-y-2 md:space-y-3 text-sm md:text-base text-text-muted">
-              <p>Bangalore, India</p>
-              <p>contact@example.com</p>
-              <p>+1 (234) 567-890</p>
+
+          <div className="md:col-span-4">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-fg-subtle mb-4">Get in touch</div>
+            <div className="space-y-2 text-sm">
+              <a href="mailto:rahulverma0549@gmail.com" className="block text-fg hover:text-accent transition-colors">
+                rahulverma0549@gmail.com
+              </a>
+              <a href="tel:+919315338608" className="block text-fg-muted hover:text-accent transition-colors">
+                +91 93153 38608
+              </a>
+              <div className="text-fg-muted">Faridabad, Haryana · India</div>
+            </div>
+            <div className="flex gap-2 mt-5">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-fg-muted hover:text-accent hover:border-accent transition-all"
+                >
+                  <s.icon size={15} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
-        
-        {/* Copyright and Credits */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-4 md:pt-6">
-          <div className="text-text-muted text-xs md:text-sm mb-3 md:mb-0">
-            © {new Date().getFullYear()} Rahul Vishwakarma. All rights reserved.
+
+        {/* Bottom */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-8">
+          <div className="font-mono text-xs text-fg-subtle">
+            © {new Date().getFullYear()} Rahul Verma · Crafted with Flutter mindset & React
           </div>
-          <div className="text-text-muted text-xs md:text-sm">
-            Designed with <span className="text-accent">♥</span> by Rahul Vishwakarma
+          <div className="font-mono text-xs text-fg-subtle">
+            <span className="text-accent">●</span> Built &amp; designed by RV
           </div>
         </div>
       </div>

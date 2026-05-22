@@ -4,45 +4,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: 'var(--primary)',
-          light: 'var(--primary-light)',
-          dark: 'var(--primary-dark)',
+        bg: {
+          DEFAULT: 'var(--bg)',
+          elev: 'var(--bg-elev)',
+          'elev-2': 'var(--bg-elev-2)',
         },
-        secondary: {
-          DEFAULT: 'var(--secondary)',
-          light: 'var(--secondary-light)',
-          dark: 'var(--secondary-dark)',
+        ink: 'var(--bg)',
+        border: {
+          DEFAULT: 'var(--border)',
+          strong: 'var(--border-strong)',
+        },
+        fg: {
+          DEFAULT: 'var(--text)',
+          muted: 'var(--text-muted)',
+          subtle: 'var(--text-subtle)',
         },
         accent: {
           DEFAULT: 'var(--accent)',
-          light: 'var(--accent-light)',
-          dark: 'var(--accent-dark)',
-        },
-        background: {
-          DEFAULT: 'var(--background)',
-          light: 'var(--background-light)',
-          lighter: 'var(--background-lighter)',
-        },
-        text: {
-          DEFAULT: 'var(--text)',
-          light: 'var(--text-light)',
-          muted: 'var(--text-muted)',
+          bright: 'var(--accent-bright)',
+          deep: 'var(--accent-deep)',
         },
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
         heading: ['Space Grotesk', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      letterSpacing: {
+        tightest: '-0.04em',
       },
       animation: {
-        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
-        'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
-        'slide-in-right': 'slideInRight 0.8s ease-out forwards',
-        'scale-in': 'scaleIn 0.8s ease-out forwards',
-        'rotate-in': 'rotateIn 0.8s ease-out forwards',
-        'bounce-in': 'bounceIn 0.8s ease-out forwards',
+        'fade-in-up': 'fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'fade-in': 'fadeIn 0.8s ease-out forwards',
+        'scale-in': 'scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
     },
   },

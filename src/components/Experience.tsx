@@ -1,218 +1,156 @@
 import React from 'react';
-import { Calendar, MapPin, Users, Code, Zap, Award, Briefcase } from 'lucide-react';
+import { MapPin, ArrowUpRight } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const experiences = [
     {
       title: 'Senior Flutter Developer',
-      company: 'Tech Almond AI',
-      location: '1214, Tower-A, SPAZE ITECH PARK, Block S, Sector 49, Gurugram, Haryana 122018',
-      period: 'March 2024 - Present',
-      description: 'Leading development team to deliver high-quality mobile applications with advanced Flutter implementations and performance optimizations.',
-      technologies: ['Flutter', 'Dart', 'Team Leadership', 'UI/UX', 'Performance Optimization'],
+      company: 'OneTick Technology Pvt. Ltd.',
+      location: 'Faridabad, India',
+      period: 'Dec 2025 — Present',
+      year: '2025',
+      current: true,
+      description:
+        'Architecting a modular Flutter codebase with Bloc + clean architecture, and leading a small team to ship a high-traffic financial product.',
+      technologies: ['Flutter', 'Bloc', 'Clean Architecture', 'Leadership'],
       achievements: [
-        'Lead development team to deliver high-quality mobile applications',
-        'Implement complex UI/UX designs with advanced Flutter widgets',
-        'Optimize application performance and reduce load times by 40%'
+        'Architected a modular Flutter app using Bloc + clean architecture — 30% drop in state-related bugs',
+        'Led a team of 3 developers shipping a high-traffic financial app',
+        'Drove 40% reduction in load times and 25% increase in user retention',
       ],
-      color: 'emerald'
     },
     {
       title: 'Senior Flutter Developer',
-      company: 'AVC Dotty LLP',
-      location: 'C-157, Janak Cinema Community Center Janakpuri Janak Cinema Community Center, 110056, Janakpuri, New Delhi, Delhi, 110056',
-      period: 'September 2023 - February 2024',
-      description: 'Developed product-based mobile applications using Flutter framework with focus on cross-functional collaboration and feature implementation.',
-      technologies: ['Flutter', 'Dart', 'Product Development', 'Cross-functional Teams'],
+      company: 'Almond AI',
+      location: 'Gurugram, India',
+      period: 'Mar 2024 — Nov 2025',
+      year: '2024',
+      description:
+        'Refactored legacy mobile codebases for performance and maintainability, and wired up real-time sync for the social platform.',
+      technologies: ['Flutter', 'Firebase', 'Refactoring', 'Real-time Sync'],
       achievements: [
-        'Developed product-based mobile applications using Flutter framework',
-        'Collaborated with cross-functional teams to define and implement features',
-        'Delivered scalable mobile solutions for business requirements'
+        'Refactored legacy codebases to improve performance and maintainability',
+        'Implemented real-time data sync via Firebase for social features',
+        'Owned UX-critical screens end-to-end across iOS and Android',
       ],
-      color: 'blue'
     },
     {
-      title: 'Flutter Developer',
-      company: 'Codewire Tech PVT. LTD.',
-      location: 'Office No: 7, 3rd floor, Amartex building, Sector-19, Behind Badkhal Mor Metro Station, Faridabad, Haryana 121002',
-      period: 'September 2022 - September 2023',
-      description: 'Built scalable applications using object-oriented programming principles with focus on code quality and performance improvements.',
-      technologies: ['Flutter', 'Dart', 'OOP', 'Code Reviews', 'Testing', 'Bug Fixing'],
+      title: 'Senior Flutter Developer',
+      company: 'Codewire Tech Pvt. Ltd.',
+      location: 'Faridabad, India',
+      period: 'Sep 2022 — Feb 2024',
+      year: '2022',
+      description:
+        'Spearheaded a school bus tracking platform with Google Maps and shipped CI/CD pipelines that compressed dev cycles.',
+      technologies: ['Flutter', 'Google Maps', 'GitHub Actions', 'Codemagic'],
       achievements: [
-        'Built scalable applications using object-oriented programming principles',
-        'Conducted code reviews and testing to ensure application stability',
-        'Resolved critical bugs and implemented performance improvements'
+        'Spearheaded a school bus tracking system with real-time Google Maps integration',
+        'Reduced development cycle time by 20% via CI/CD on GitHub Actions + Codemagic',
+        'Owned code reviews and raised the codebase quality bar',
       ],
-      color: 'purple'
     },
     {
       title: 'Junior Flutter Developer',
       company: 'Soumya Technology',
-      location: 'Balaji Vihar, near Tejal College Bheru ji Mod, Reengus, Rajasthan 332404',
-      period: 'January 2021 - September 2022',
-      description: 'Started as trainee and advanced to junior developer through proven performance, developing foundational skills in Flutter development.',
-      technologies: ['Flutter', 'Dart', 'Mobile Architecture', 'Project Deployment'],
+      location: 'Rajasthan, India',
+      period: 'Jan 2021 — Sep 2022',
+      year: '2021',
+      description:
+        'Started as a trainee and grew into a junior dev role, delivering Flutter apps end-to-end across multiple verticals.',
+      technologies: ['Flutter', 'Dart', 'Google Maps', 'Firebase'],
       achievements: [
-        'Started as trainee and advanced to junior developer through proven performance',
-        'Developed foundational skills in Flutter, Dart, and mobile app architecture',
-        'Delivered multiple projects from concept to production deployment'
+        'Delivered 8+ projects from concept to production',
+        'Built real-time location tracking using Google Maps + Firebase',
+        'Established foundational skills in Flutter, Dart, and mobile architecture',
       ],
-      color: 'orange'
-    }
+    },
   ];
 
   return (
-    <section id="experience" className="py-16 md:py-24 relative z-10">
+    <section id="experience" className="relative py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-10 md:mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent-light text-xs md:text-sm font-medium mb-3 md:mb-4 animate-fade-in-up">
-            <span>My Journey</span>
+        <div className="flex items-end justify-between mb-16 animate-fade-in-up">
+          <div>
+            <div className="font-mono text-xs text-accent uppercase tracking-widest mb-4">
+              [ 03 ] Experience
+            </div>
+            <h2 className="font-heading font-bold text-fg text-4xl md:text-6xl tracking-tightest leading-[1.05] max-w-3xl">
+              Five years.<br className="hidden md:block" />
+              Four teams. One craft.
+            </h2>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold font-heading animate-fade-in-up animation-delay-300 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-            Professional Experience
-          </h2>
-          <p className="text-sm md:text-base mt-3 md:mt-4 text-text-muted max-w-2xl mx-auto animate-fade-in-up animation-delay-500">
-            My professional path and career highlights
-          </p>
         </div>
-        
-        {/* Desktop Timeline */}
-        <div className="relative hidden md:block">
-          {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-400 via-blue-500 to-purple-600"></div>
-          
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <div 
-                key={index}
-                className="relative group animate-fade-in-up"
-                style={{ animationDelay: `${index * 300}ms` }}
+
+        <div className="relative">
+          {/* vertical rail */}
+          <div className="absolute left-[7px] md:left-[11px] top-2 bottom-2 w-px bg-border"></div>
+
+          <div className="space-y-6">
+            {experiences.map((exp, i) => (
+              <div
+                key={`${exp.company}-${i}`}
+                className="relative pl-8 md:pl-14 animate-fade-in-up"
+                style={{ animationDelay: `${i * 120}ms` }}
               >
-                {/* Timeline dot */}
-                <div className={`absolute left-6 w-4 h-4 bg-gradient-to-r from-${exp.color}-400 to-${exp.color}-600 rounded-full border-4 border-slate-900 group-hover:scale-125 transition-transform duration-300`}></div>
-                
-                <div className="ml-20 bg-background-light/50 backdrop-blur-sm rounded-2xl p-8 border border-background-lighter hover:border-accent/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-accent/10">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                {/* node */}
+                <div className="absolute left-0 top-3 flex items-center">
+                  <div className={`w-[15px] h-[15px] md:w-[23px] md:h-[23px] rounded-full border-2 ${
+                    exp.current ? 'border-accent bg-accent/20' : 'border-border-strong bg-bg-elev'
+                  } flex items-center justify-center`}>
+                    {exp.current && <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-accent animate-pulse"></span>}
+                  </div>
+                </div>
+
+                <div className="group bg-bg-elev border border-border rounded-2xl p-6 md:p-8 hover-lift hover:border-border-strong transition-all">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-5">
                     <div>
-                      <h3 className="text-2xl font-bold text-text font-heading mb-2">{exp.title}</h3>
-                      <div className="flex items-center space-x-4 text-text-muted mb-4">
-                        <span className={`text-${exp.color}-400 font-semibold flex items-center space-x-1`}>
-                          <Briefcase size={16} />
-                          <span>{exp.company}</span>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="font-mono text-xs text-accent">{exp.year}</span>
+                        <span className="font-mono text-xs text-fg-subtle">·</span>
+                        <span className="font-mono text-xs text-fg-subtle">{exp.period}</span>
+                        {exp.current && (
+                          <span className="ml-1 px-2 py-0.5 rounded-full bg-accent/10 border border-accent/30 text-accent font-mono text-[10px] uppercase tracking-widest">
+                            current
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="font-heading text-fg text-xl md:text-2xl mb-1">{exp.title}</h3>
+                      <div className="flex items-center gap-3 text-sm text-fg-muted">
+                        <span className="text-fg font-medium">{exp.company}</span>
+                        <span className="flex items-center gap-1 text-fg-subtle">
+                          <MapPin size={12} />
+                          {exp.location}
                         </span>
-                        <div className="flex items-center space-x-1">
-                          <MapPin size={16} />
-                          <span>{exp.location}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Calendar size={16} />
-                          <span>{exp.period}</span>
-                        </div>
                       </div>
                     </div>
+                    <ArrowUpRight
+                      size={18}
+                      className="hidden md:block text-fg-subtle group-hover:text-accent group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
+                    />
                   </div>
-                  
-                  <p className="text-text-light mb-6 leading-relaxed">{exp.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-text mb-3 flex items-center space-x-2">
-                      <Award className={`text-${exp.color}-400`} size={20} />
-                      <span>Key Achievements:</span>
-                    </h4>
-                    <ul className="space-y-2">
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start space-x-2 text-text-light">
-                          <div className={`w-2 h-2 bg-${exp.color}-400 rounded-full mt-2 flex-shrink-0`}></div>
-                          <span>{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold text-text mb-3 flex items-center space-x-2">
-                      <Code className={`text-${exp.color}-400`} size={20} />
-                      <span>Technologies Used:</span>
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, i) => (
-                        <span 
-                          key={i}
-                          className={`px-3 py-1 bg-background text-${exp.color}-400 rounded-full text-sm font-medium hover:bg-${exp.color}-400 hover:text-background transition-colors duration-300`}
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+
+                  <p className="text-fg-muted leading-relaxed mb-5">{exp.description}</p>
+
+                  <ul className="space-y-1.5 mb-5">
+                    {exp.achievements.map((a, j) => (
+                      <li key={j} className="flex gap-3 text-sm text-fg-muted">
+                        <span className="text-accent font-mono mt-1">+</span>
+                        <span>{a}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-1.5 pt-5 border-t border-border">
+                    {exp.technologies.map((t) => (
+                      <span key={t} className="px-2.5 py-1 font-mono text-xs bg-bg text-fg-muted border border-border rounded-md">
+                        {t}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-        
-        {/* Mobile Timeline */}
-        <div className="md:hidden space-y-8">
-          {experiences.map((exp, index) => (
-            <div 
-              key={index}
-              className="relative animate-fade-in-up bg-background-light/50 backdrop-blur-sm rounded-xl p-5 border border-background-lighter hover:border-accent/50 transition-all duration-300"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              <div className="flex flex-col mb-4">
-                <h3 className="text-xl font-bold text-text font-heading mb-2">{exp.title}</h3>
-                <div className="flex flex-col space-y-2 text-sm text-text-muted">
-                  <span className={`text-${exp.color}-400 font-semibold flex items-center space-x-1`}>
-                    <Briefcase size={14} />
-                    <span>{exp.company}</span>
-                  </span>
-                  <div className="flex items-center space-x-1">
-                    <MapPin size={14} />
-                    <span className="text-xs">{exp.location}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <Calendar size={14} />
-                    <span>{exp.period}</span>
-                  </div>
-                </div>
-              </div>
-              
-              <p className="text-sm text-text-light mb-4 leading-relaxed">{exp.description}</p>
-              
-              <div className="mb-4">
-                <h4 className="text-base font-semibold text-text mb-2 flex items-center space-x-2">
-                  <Award className={`text-${exp.color}-400`} size={16} />
-                  <span>Key Achievements:</span>
-                </h4>
-                <ul className="space-y-1.5">
-                  {exp.achievements.map((achievement, i) => (
-                    <li key={i} className="flex items-start space-x-2 text-sm text-text-light">
-                      <div className={`w-1.5 h-1.5 bg-${exp.color}-400 rounded-full mt-1.5 flex-shrink-0`}></div>
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-base font-semibold text-text mb-2 flex items-center space-x-2">
-                  <Code className={`text-${exp.color}-400`} size={16} />
-                  <span>Technologies:</span>
-                </h4>
-                <div className="flex flex-wrap gap-1.5">
-                  {exp.technologies.map((tech, i) => (
-                    <span 
-                      key={i}
-                      className={`px-2 py-0.5 bg-background text-${exp.color}-400 rounded-full text-xs font-medium hover:bg-${exp.color}-400 hover:text-background transition-colors duration-300`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

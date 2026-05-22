@@ -1,127 +1,130 @@
 import React from 'react';
-import { Code, Palette, Zap, Users, Globe, BookOpen } from 'lucide-react';
+import { Code2, Layers, Zap, Users, Gauge, GraduationCap, ArrowUpRight } from 'lucide-react';
 
 const About: React.FC = () => {
   const qualities = [
-    {
-      icon: Code,
-      title: 'Clean Code',
-      description: 'I write maintainable, scalable code with best practices and patterns.'
-    },
-    {
-      icon: Palette,
-      title: 'UI/UX Focus',
-      description: 'I create intuitive interfaces with attention to visual aesthetics and usability.'
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: 'I optimize applications for speed and efficiency across all devices.'
-    },
-    {
-      icon: Users,
-      title: 'Team Player',
-      description: 'I collaborate effectively, communicate clearly, and share knowledge.'
-    },
-    {
-      icon: Globe,
-      title: 'Adaptability',
-      description: 'I quickly learn new technologies and adapt to changing requirements.'
-    },
-    {
-      icon: BookOpen,
-      title: 'Continuous Learning',
-      description: 'I stay updated with the latest trends and best practices in development.'
-    }
+    { icon: Layers, title: 'Clean Architecture', description: 'MVC, MVVM, SOLID — separation that survives change.' },
+    { icon: Code2, title: 'State Discipline', description: 'Bloc, GetX, Provider — chosen for the shape of the problem.' },
+    { icon: Zap, title: 'Performance', description: '40% faster load times. Frame budgets honoured.' },
+    { icon: Users, title: 'Team Leadership', description: 'Led teams of 3+; mentored, reviewed, and shipped.' },
+    { icon: Gauge, title: 'CI/CD', description: 'GitHub Actions + Codemagic. 20% shorter dev cycles.' },
+    { icon: GraduationCap, title: 'Always Learning', description: 'New tools the moment they earn their place.' },
   ];
 
   return (
-    <section id="about" className="py-16 md:py-24 relative">
+    <section id="about" className="relative py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-10 md:mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary-light text-xs md:text-sm font-medium mb-3 md:mb-4 animate-fade-in-up">
-            <span>About Me</span>
+        {/* Section label */}
+        <div className="flex items-end justify-between mb-16 animate-fade-in-up">
+          <div>
+            <div className="font-mono text-xs text-accent uppercase tracking-widest mb-4">
+              [ 01 ] About
+            </div>
+            <h2 className="font-heading font-bold text-fg text-4xl md:text-6xl tracking-tightest leading-[1.05] max-w-3xl">
+              I architect and ship Flutter apps<br className="hidden md:block" />
+              that <span className="accent-gradient">scale in production</span>.
+            </h2>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold font-heading animate-fade-in-up animation-delay-300">
-            <span className="bg-gradient-to-r from-primary-light via-secondary to-accent bg-clip-text text-transparent">
-              Flutter Developer & UI/UX Enthusiast
-            </span>
-          </h2>
-          <p className="mt-3 md:mt-4 text-sm md:text-base text-text-muted max-w-2xl mx-auto animate-fade-in-up animation-delay-500">
-            Passionate about creating beautiful, high-performance mobile applications
-          </p>
+          <div className="hidden lg:block font-mono text-xs text-fg-subtle text-right">
+            <div>scroll ↓</div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-          {/* Image or Avatar with decorative elements */}
-          <div className="relative animate-fade-in-up order-2 md:order-1">
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/5 rounded-full filter blur-xl animate-pulse opacity-70"></div>
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full filter blur-xl animate-pulse opacity-70 animation-delay-500"></div>
-            
-            <div className="relative z-10 w-full h-96 bg-gradient-to-br from-background-light to-background rounded-2xl border border-background-lighter/50 p-6 flex items-center justify-center shadow-xl overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              
-              <div className="relative z-10 space-y-6 max-w-lg">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6 mx-auto">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-primary-light via-secondary-light to-accent-light bg-clip-text text-transparent font-heading">
-                    RV
-                  </div>
-                </div>
-                
-                <blockquote className="text-lg text-text-light italic">
-                  "I believe that great software combines technical excellence with thoughtful design. My goal is to create applications that not only work flawlessly but also provide a delightful user experience."
-                </blockquote>
-                
-                <div className="flex justify-center pt-4">
-                  <div className="h-px w-16 bg-gradient-to-r from-primary/50 to-secondary/50"></div>
-                </div>
+        {/* Bento grid */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mb-20">
+          {/* Big intro card */}
+          <div className="md:col-span-4 bg-bg-elev border border-border rounded-2xl p-8 md:p-10 hover-lift hover:border-border-strong animate-fade-in-up">
+            <div className="space-y-5 text-fg-muted leading-relaxed">
+              <p className="text-fg text-lg">
+                Senior Flutter Developer with 5+ years delivering high-performance
+                mobile applications across iOS and Android.
+              </p>
+              <p>
+                I'm fluent in API integration, state management (Bloc, GetX, Provider),
+                Firebase (Auth, Firestore, FCM), and clean architecture. I've shipped
+                production work for fintech, e-commerce, social, gov-tech and edtech.
+              </p>
+              <p>
+                Track record: 40% faster load times, 30% fewer state-related bugs via
+                Bloc + clean architecture, and 25% retention gains on a high-traffic
+                financial app I led with a team of 3.
+              </p>
+            </div>
+
+            <a
+              href="#contact"
+              className="mt-8 inline-flex items-center gap-2 text-accent font-medium group"
+            >
+              Get in touch
+              <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+          </div>
+
+          {/* Quote card */}
+          <div className="md:col-span-2 bg-bg-elev border border-border rounded-2xl p-8 flex flex-col justify-between hover-lift hover:border-accent/30 animate-fade-in-up animation-delay-100">
+            <div className="font-heading text-6xl text-accent leading-none">"</div>
+            <p className="font-heading text-fg text-lg leading-snug">
+              Architecture isn't decoration — it's the reason features ship next quarter, not next year.
+            </p>
+            <div className="flex items-center gap-3 pt-4 border-t border-border">
+              <div className="w-9 h-9 rounded-full bg-accent text-bg font-mono font-bold flex items-center justify-center text-sm">
+                rv
+              </div>
+              <div>
+                <div className="text-fg text-sm font-medium">Rahul Verma</div>
+                <div className="text-fg-subtle text-xs font-mono">@RahulDev-flutter</div>
               </div>
             </div>
           </div>
 
-          {/* About Text */}
-          <div className="animate-fade-in-up animation-delay-300 order-1 md:order-2">
-            <div className="space-y-6">
-              <p className="text-text-light leading-relaxed">
-                I'm a passionate Senior Flutter Developer with over 3+ years of experience in creating modern, scalable mobile applications. My journey started as a trainee at Soumya Technology and I've grown to lead development teams at Almond AI, consistently delivering high-quality mobile solutions.
-              </p>
-              <p className="text-text-light leading-relaxed">
-                I specialize in Flutter and Dart, with expertise in building complex mobile applications including location-based services, e-commerce platforms, and social media applications. I've successfully optimized app performance by 40% and led cross-functional teams to deliver production-ready applications.
-              </p>
-              <p className="text-text-light leading-relaxed">
-                My experience spans across various domains including fintech, education, e-commerce, and government services. I'm passionate about creating user-centric mobile experiences and mentoring junior developers.
-              </p>
-              
-              <div className="pt-4">
-                <a href="#contact" className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-all duration-300 font-medium">
-                  Get in Touch
-                </a>
-              </div>
+          {/* Domains */}
+          <div className="md:col-span-2 bg-bg-elev border border-border rounded-2xl p-6 hover-lift hover:border-accent/30 animate-fade-in-up animation-delay-200">
+            <div className="font-mono text-xs text-fg-subtle uppercase tracking-widest mb-3">Domains</div>
+            <div className="flex flex-wrap gap-1.5">
+              {['fintech', 'e-commerce', 'social', 'edtech', 'gov-tech', 'logistics'].map((d) => (
+                <span key={d} className="px-2.5 py-1 font-mono text-xs bg-bg-elev-2 text-fg-muted border border-border rounded-md">
+                  {d}
+                </span>
+              ))}
             </div>
           </div>
+
+          {/* Education */}
+          <div className="md:col-span-2 bg-bg-elev border border-border rounded-2xl p-6 hover-lift hover:border-accent/30 animate-fade-in-up animation-delay-300">
+            <div className="font-mono text-xs text-fg-subtle uppercase tracking-widest mb-3">Education</div>
+            <div className="text-fg font-medium text-sm leading-snug">BCA — Computer Application</div>
+            <div className="text-fg-muted text-xs mt-1">UEM, Jaipur</div>
+            <div className="text-fg-subtle text-xs font-mono mt-2">Jul 2019 – May 2022</div>
+          </div>
+
+          {/* Location */}
+          <div className="md:col-span-2 bg-bg-elev border border-border rounded-2xl p-6 hover-lift hover:border-accent/30 animate-fade-in-up animation-delay-400">
+            <div className="font-mono text-xs text-fg-subtle uppercase tracking-widest mb-3">Based in</div>
+            <div className="font-heading text-fg text-2xl">Faridabad</div>
+            <div className="text-fg-muted text-xs mt-1">Haryana, India · GMT+5:30</div>
+          </div>
         </div>
-        
-        {/* Qualities/Values Grid */}
-        <div className="mt-20">
-          <h3 className="text-2xl font-bold text-text mb-10 text-center font-heading">
-            What I Bring to the Table
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {qualities.map((quality, index) => (
-              <div 
-                key={quality.title}
-                className="bg-background-light p-6 rounded-xl border border-background-lighter hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+
+        {/* Competencies */}
+        <div className="animate-fade-in-up">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="font-mono text-xs text-accent uppercase tracking-widest">[ core competencies ]</div>
+            <div className="h-px flex-1 bg-border"></div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+            {qualities.map((q, i) => (
+              <div
+                key={q.title}
+                className="group bg-bg-elev p-7 hover:bg-bg-elev-2 transition-colors animate-fade-in-up"
+                style={{ animationDelay: `${i * 80}ms` }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                    <quality.icon size={20} />
+                  <div className="p-2.5 rounded-lg bg-accent/10 text-accent border border-accent/20 group-hover:bg-accent group-hover:text-bg transition-colors">
+                    <q.icon size={18} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-text mb-2">{quality.title}</h4>
-                    <p className="text-text-muted text-sm">{quality.description}</p>
+                    <h4 className="font-heading text-fg text-lg mb-1">{q.title}</h4>
+                    <p className="text-fg-muted text-sm leading-relaxed">{q.description}</p>
                   </div>
                 </div>
               </div>
