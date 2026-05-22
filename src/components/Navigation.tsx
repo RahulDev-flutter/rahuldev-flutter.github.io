@@ -36,13 +36,20 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, scrollToSection 
         <div className="flex justify-between items-center h-16">
           <button
             onClick={() => scrollToSection('home')}
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-2.5 group"
             aria-label="Home"
           >
             <div className="w-8 h-8 rounded-md bg-accent text-bg flex items-center justify-center font-mono font-bold text-sm group-hover:rotate-3 transition-transform">
               rv
             </div>
-            <span className="font-heading font-semibold text-fg tracking-tight">rahul<span className="text-accent">.</span>dev</span>
+            <div className="flex flex-col items-start leading-none">
+              <span className="font-heading font-semibold text-fg tracking-tight text-sm sm:text-base">
+                Rahul Verma
+              </span>
+              <span className="font-mono text-[9px] sm:text-[10px] text-fg-subtle tracking-widest uppercase mt-0.5">
+                Flutter Dev<span className="text-accent">.</span>
+              </span>
+            </div>
           </button>
 
           {/* Desktop nav */}
