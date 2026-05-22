@@ -62,12 +62,12 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <a
-                href="/cv.pdf"
-                download="Rahul_Verma_CV.pdf"
+                href="/Rahul_Verma_Resume.pdf"
+                download="Rahul_Verma_Resume.pdf"
                 className="group inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border-strong text-fg hover:border-accent hover:text-accent transition-all"
               >
                 <Download size={16} />
-                Download CV
+                Download Resume
               </a>
             </div>
 

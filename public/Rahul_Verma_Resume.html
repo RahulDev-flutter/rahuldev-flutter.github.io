@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul Verma — Resume</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { background: #f2f2f2; }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #111;
+    background: #fff;
+    width: 100%;
+    max-width: 794px;
+    margin: 0 auto;
+    padding: 28px 36px;
+  }
+
+  /* RESPONSIVE — tablet & phone */
+  @media (max-width: 640px) {
+    body {
+      font-size: 13px;
+      padding: 20px 18px;
+      line-height: 1.5;
+    }
+    .top h1 { font-size: 22px; letter-spacing: 1px; }
+    .top .role { font-size: 12px; }
+    .contact-row { font-size: 11.5px; line-height: 1.7; }
+    .contact-row span { display: inline-block; }
+    .section-title { font-size: 10.5px; }
+    .summary p,
+    .skills-table,
+    .comp-list,
+    .exp-item ul,
+    .project-item,
+    .edu-item { font-size: 12.5px; }
+    .exp-title { font-size: 13px; }
+    .exp-company { font-size: 12.5px; }
+    .exp-date { font-size: 11.5px; }
+    .edu-item strong { font-size: 13px; }
+    .edu-item span { font-size: 11.5px; }
+
+    /* Stack two-column layouts on mobile */
+    .two-col {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    /* Let skills wrap nicely */
+    .skills-table td:first-child { width: 110px; }
+
+    /* Experience header: stack title and date */
+    .exp-header { flex-direction: column; align-items: flex-start; }
+    .exp-date { margin-top: 2px; }
+  }
+
+  @media (max-width: 380px) {
+    body { padding: 16px 14px; }
+    .contact-row span { margin: 0 3px; }
+    .skills-table td:first-child { width: auto; display: block; padding-bottom: 0; }
+    .skills-table td:last-child { display: block; padding-bottom: 6px; }
+    .skills-table tr { display: block; margin-bottom: 4px; }
+  }
+
+  /* HEADER */
+  .top {
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #111;
+    margin-bottom: 10px;
+  }
+  .top h1 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .top .role {
+    font-size: 11px;
+    color: #444;
+    margin-top: 2px;
+  }
+  .contact-row {
+    margin-top: 4px;
+    font-size: 10.5px;
+    color: #333;
+  }
+  .contact-row a { color: #333; text-decoration: none; }
+  .contact-row span { margin: 0 5px; color: #bbb; }
+
+  /* SECTION */
+  .section { margin-top: 10px; }
+  .section-title {
+    font-size: 9.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+  }
+
+  /* SUMMARY */
+  .summary p { font-size: 11.5px; color: #222; line-height: 1.55; }
+
+  /* SKILLS */
+  .skills-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .skills-table td { padding: 2px 6px 2px 0; vertical-align: top; }
+  .skills-table td:first-child { width: 140px; font-weight: bold; color: #222; white-space: nowrap; }
+  .skills-table td:last-child { color: #333; }
+
+  /* COMPETENCIES */
+  .comp-list { font-size: 11px; color: #222; line-height: 1.7; }
+
+  /* TWO COLUMN LAYOUT */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 28px;
+  }
+
+  /* EXPERIENCE */
+  .exp-item { margin-bottom: 10px; }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+  .exp-left { flex: 1; }
+  .exp-title { font-weight: bold; font-size: 11.5px; }
+  .exp-company { font-style: italic; font-size: 11px; color: #333; }
+  .exp-date { font-size: 10.5px; color: #555; white-space: nowrap; }
+  .exp-item ul { margin-top: 3px; padding-left: 14px; color: #222; font-size: 11px; }
+  .exp-item ul li { margin-bottom: 2px; line-height: 1.45; }
+
+  /* PROJECTS */
+  .project-item { margin-bottom: 5px; font-size: 11px; }
+  .project-item strong { font-size: 11px; }
+  .project-item p { color: #333; margin-top: 1px; line-height: 1.4; }
+
+  /* EDUCATION */
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2px;
+    font-size: 11px;
+  }
+  .edu-item strong { font-size: 11.5px; }
+  .edu-item span { color: #555; font-size: 10.5px; }
+
+  @media print {
+    html, body { background: #fff; }
+    body {
+      margin: 0 auto;
+      padding: 20px 32px;
+      width: 794px;
+      max-width: 794px;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .top h1 { font-size: 20px; }
+    .top .role { font-size: 11px; }
+    .contact-row { font-size: 10.5px; }
+    .section-title { font-size: 9.5px; }
+    .two-col { grid-template-columns: 1fr 1fr; gap: 0 28px; }
+    .exp-header { flex-direction: row; align-items: baseline; }
+    .skills-table td:first-child { width: 140px; display: table-cell; }
+    .skills-table td:last-child { display: table-cell; }
+    .skills-table tr { display: table-row; }
+    @page { size: A4; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="top">
+  <h1>Rahul Verma</h1>
+  <div class="role">Senior Flutter Developer &nbsp;|&nbsp; 5+ Years Experience</div>
+  <div class="contact-row">
+    <a href="mailto:rahulverma0549@gmail.com">rahulverma0549@gmail.com</a>
+    <span>|</span>+91-9315338608<span>|</span>
+    <a href="https://linkedin.com/in/rahulverma-dev" target="_blank">linkedin.com/in/rahulverma-dev</a>
+    <span>|</span>
+    <a href="https://github.com/rahulverma0549" target="_blank">github.com/rahulverma0549</a>
+    <span>|</span>Faridabad, Haryana
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="section summary">
+  <div class="section-title">Professional Summary</div>
+  <p>Senior Flutter Developer with 5+ years of experience delivering high-performance mobile applications. Expert in API integration, state management (Bloc, GetX, Provider), Firebase, and clean architecture. Proven track record of optimizing performance (40% faster load times), leading cross-functional teams, and deploying production-ready applications across iOS and Android platforms.</p>
+</div>
+
+<!-- SKILLS + COMPETENCIES side by side -->
+<div class="two-col">
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <table class="skills-table">
+      <tr><td>Mobile</td><td>Flutter, Dart, iOS, Android</td></tr>
+      <tr><td>Architecture</td><td>Clean Architecture, MVC, MVVM, SOLID</td></tr>
+      <tr><td>State Management</td><td>Bloc, GetX, Provider</td></tr>
+      <tr><td>Backend &amp; APIs</td><td>RESTful APIs, Firebase (Auth, Firestore, FCM)</td></tr>
+      <tr><td>Tools &amp; DevOps</td><td>Git, GoRouter, Google Maps, CI/CD (GitHub Actions, Codemagic)</td></tr>
+    </table>
+  </div>
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="comp-list">
+      Leadership &amp; Team Management &bull; Problem Solving &bull; Agile/Scrum &bull;
+      Cross-functional Collaboration &bull; Technical Mentoring &bull;
+      Stakeholder Communication &bull; Code Review &amp; QA &bull; Performance Optimization
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+  <div class="section-title">Professional Experience</div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-left"><span class="exp-title">Senior Flutter Developer</span> &mdash; <span class="exp-company">OneTick Technology Pvt. LTD.</span></div>
+      <div class="exp-date">Dec 2025 – Present</div>
+    </div>
+    <ul>
+      <li>Architected a modular Flutter application using Bloc and clean architecture, enabling faster feature rollouts and reducing state-related bugs by 30%.</li>
+      <li>Led a team of 3 developers to deliver a high-traffic financial app, resulting in a 40% reduction in load times and a 25% increase in user retention.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-left"><span class="exp-title">Senior Flutter Developer</span> &mdash; <span class="exp-company">Almond AI</span></div>
+      <div class="exp-date">Mar 2024 – Nov 2025</div>
+    </div>
+    <ul>
+      <li>Refactored legacy codebases to improve app performance and maintainability.</li>
+      <li>Implemented real-time data synchronization using Firebase, enhancing user experience for social platform features.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-left"><span class="exp-title">Senior Flutter Developer</span> &mdash; <span class="exp-company">Codewire Tech PVT. LTD.</span></div>
+      <div class="exp-date">Sep 2022 – Feb 2024</div>
+    </div>
+    <ul>
+      <li>Spearheaded development of a school bus tracking system, integrating Google Maps APIs for real-time location updates.</li>
+      <li>Reduced development cycle time by 20% through efficient CI/CD pipelines using GitHub Actions and Codemagic.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-left"><span class="exp-title">Junior Flutter Developer</span> &mdash; <span class="exp-company">Soumya Technology</span></div>
+      <div class="exp-date">Jan 2021 – Sep 2022</div>
+    </div>
+    <ul>
+      <li>Delivered 8+ projects from concept to production with real-time location tracking using Google Maps and Firebase.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PROJECTS + EDUCATION side by side -->
+<div class="two-col">
+  <div class="section">
+    <div class="section-title">Key Projects</div>
+    <div class="project-item"><strong>HR Bachat Nidhi</strong><p>Daily collection app with real-time location tracking and offline-first architecture for financial transactions.</p></div>
+    <div class="project-item"><strong>School Bus Tracking</strong><p>GPS tracking with push notifications and role-based access control for parents and school administration.</p></div>
+    <div class="project-item"><strong>Zwolf Social Platform</strong><p>Social media app combining Facebook and LinkedIn features with real-time chat.</p></div>
+    <div class="project-item"><strong>Vegon Mode</strong><p>E-commerce grocery app with payment gateway integration and advanced state management.</p></div>
+    <div class="project-item"><strong>IOA (India Online Award)</strong><p>Business networking platform with voting system and analytics dashboard.</p></div>
+    <div class="project-item"><strong>Takse Service Mall</strong><p>Government services app with document management and secure authentication.</p></div>
+  </div>
+
+  <div>
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu-item">
+        <div>
+          <strong>Bachelor's in Computer Application (BCA)</strong><br>
+          University of Engineering &amp; Management, Jaipur
+        </div>
+        <span>Jul 2019 – May 2022</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
