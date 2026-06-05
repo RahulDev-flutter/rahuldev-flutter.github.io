@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Layers, Boxes, Cloud, Wrench } from 'lucide-react';
+import { Smartphone, Layers, Boxes, Cloud, Wrench, Rocket } from 'lucide-react';
 
 const Skills: React.FC = () => {
   const groups = [
@@ -12,6 +12,7 @@ const Skills: React.FC = () => {
         { name: 'Dart', level: 95 },
         { name: 'Android', level: 85 },
         { name: 'iOS', level: 80 },
+        { name: 'Native Android', level: 70 },
       ],
     },
     {
@@ -55,6 +56,17 @@ const Skills: React.FC = () => {
         { name: 'GoRouter', level: 85 },
         { name: 'Google Maps', level: 85 },
         { name: 'CI/CD (GH Actions, Codemagic)', level: 80 },
+      ],
+    },
+    {
+      category: 'Deployment',
+      icon: Rocket,
+      tag: 'release',
+      items: [
+        { name: 'Play Store Publishing', level: 90 },
+        { name: 'App Store Publishing', level: 85 },
+        { name: 'Release Management', level: 85 },
+        { name: 'Updates & Versioning', level: 85 },
       ],
     },
   ];

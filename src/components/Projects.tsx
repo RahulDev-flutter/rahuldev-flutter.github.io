@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, ArrowUpRight, MapPin, Users, FileText, Briefcase, Wallet, Terminal, Sparkles, ShoppingCart, Apple, Smartphone } from 'lucide-react';
+import { ExternalLink, Github, ArrowUpRight, MapPin, Users, FileText, Briefcase, Wallet, Terminal, Sparkles, ShoppingCart, Apple, Smartphone, Cpu, Sun, MessageCircle } from 'lucide-react';
 
 interface Project {
   title: string;
@@ -46,6 +46,32 @@ const Projects: React.FC = () => {
       cta: 'Google Play',
     },
     {
+      title: 'DigiSpark Minda',
+      subtitle: 'IoT · Industrial monitoring',
+      description:
+        'Industrial IoT platform for Minda Group — real-time device monitoring and smart management. Live on Google Play and the App Store.',
+      technologies: ['Flutter', 'IoT', 'Real-time', 'Bloc', 'REST'],
+      category: 'enterprise',
+      platform: 'both',
+      featured: true,
+      icon: Cpu,
+      liveUrl: 'https://play.google.com/store/apps/details?id=com.digispark.minda&hl=en_IN',
+      cta: 'Google Play',
+    },
+    {
+      title: 'Waaree Prime+',
+      subtitle: 'Energy · Solar performance',
+      description:
+        'Solar energy management app for Waaree Group — performance tracking, analytics, and live device telemetry. Shipped to both stores.',
+      technologies: ['Flutter', 'Analytics', 'Firebase', 'REST'],
+      category: 'enterprise',
+      platform: 'both',
+      featured: true,
+      icon: Sun,
+      liveUrl: 'https://play.google.com/store/apps/details?id=com.almonds.waaree&hl=en_IN',
+      cta: 'Google Play',
+    },
+    {
       title: 'Takse Service Mall',
       subtitle: 'Gov-tech · Government services',
       description:
@@ -57,6 +83,17 @@ const Projects: React.FC = () => {
       icon: FileText,
       liveUrl: 'https://play.google.com/store/apps/details?id=com.taksemall.app&hl=en_IN',
       cta: 'Google Play',
+    },
+    {
+      title: 'Zwolf Social Platform',
+      subtitle: 'Social · Chat & feed',
+      description:
+        'Social media app combining Facebook-style feed with LinkedIn-style professional networking and real-time chat.',
+      technologies: ['Flutter', 'Firebase', 'Real-time chat', 'Bloc'],
+      category: 'app',
+      platform: 'github',
+      featured: false,
+      icon: MessageCircle,
     },
     {
       title: 'Somany — Almonds',

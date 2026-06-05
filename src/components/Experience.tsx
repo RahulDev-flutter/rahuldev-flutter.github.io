@@ -35,7 +35,7 @@ const Experience: React.FC = () => {
       ],
     },
     {
-      title: 'Senior Flutter Developer',
+      title: 'Flutter Developer',
       company: 'Codewire Tech Pvt. Ltd.',
       location: 'Faridabad, India',
       period: 'Sep 2022 — Feb 2024',
