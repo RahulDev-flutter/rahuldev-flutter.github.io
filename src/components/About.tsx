@@ -36,7 +36,7 @@ const About: React.FC = () => {
           <div className="md:col-span-4 bg-bg-elev border border-border rounded-2xl p-8 md:p-10 hover-lift hover:border-border-strong animate-fade-in-up">
             <div className="space-y-5 text-fg-muted leading-relaxed">
               <p className="text-fg text-lg">
-                Senior Flutter Developer with 5+ years delivering high-performance
+                Product Engineer with 5+ years delivering high-performance
                 mobile applications across iOS and Android.
               </p>
               <p>

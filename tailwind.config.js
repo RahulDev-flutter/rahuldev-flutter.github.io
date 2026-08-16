@@ -24,6 +24,7 @@ export default {
           bright: 'var(--accent-bright)',
           deep: 'var(--accent-deep)',
         },
+        danger: 'var(--danger)',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

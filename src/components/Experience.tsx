@@ -4,12 +4,27 @@ import { MapPin, ArrowUpRight } from 'lucide-react';
 const Experience: React.FC = () => {
   const experiences = [
     {
+      title: 'Product Engineer',
+      company: 'Samaaro',
+      location: 'Bengaluru, India',
+      period: 'Jun 2026 — Present',
+      year: '2026',
+      current: true,
+      description:
+        'Building on Samaaro, an AI-powered event marketing platform — taking product ideas from spec to production across mobile and web.',
+      technologies: ['Flutter', 'Product Engineering', 'AI', 'Event Tech'],
+      achievements: [
+        'Shipping product features end-to-end on an AI-powered event marketing platform',
+        'Partnering with design and product to turn requirements into production releases',
+        'Carrying clean-architecture and state-management discipline into a product-engineering role',
+      ],
+    },
+    {
       title: 'Senior Flutter Developer',
       company: 'OneTick Technology Pvt. Ltd.',
       location: 'Faridabad, India',
-      period: 'Dec 2025 — Present',
+      period: 'Dec 2025 — May 2026',
       year: '2025',
-      current: true,
       description:
         'Architecting a modular Flutter codebase with Bloc + clean architecture, and leading a small team to ship a high-traffic financial product.',
       technologies: ['Flutter', 'Bloc', 'Clean Architecture', 'Leadership'],
@@ -76,7 +91,7 @@ const Experience: React.FC = () => {
             </div>
             <h2 className="font-heading font-bold text-fg text-4xl md:text-6xl tracking-tightest leading-[1.05] max-w-3xl">
               Five years.<br className="hidden md:block" />
-              Four teams. One craft.
+              Five teams. One craft.
             </h2>
           </div>
         </div>

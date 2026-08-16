@@ -22,21 +22,21 @@ const knowledgeBase: Intent[] = [
     id: 'who',
     keywords: ['who', 'about', 'introduce', 'intro', 'tell me about', 'rahul', 'name', 'yourself'],
     answer: () =>
-      "Rahul Verma — Senior Flutter Developer with 5+ years building high-performance mobile apps. He architects with Bloc and clean architecture, integrates Firebase end-to-end, and currently works at OneTick Technology in Faridabad.",
+      "Rahul Verma — Product Engineer with 5+ years building high-performance mobile apps. He architects with Bloc and clean architecture, integrates Firebase end-to-end, and currently works at Samaaro, an AI-powered event marketing platform, in Bengaluru.",
     followUps: ['What is his experience?', 'What tech does he use?', 'How to contact him?'],
   },
   {
     id: 'experience',
     keywords: ['experience', 'years', 'how long', 'work history', 'career', 'job', 'companies', 'worked'],
     answer: () =>
-      "5+ years of Flutter experience across four companies:\n\n• OneTick Technology — Senior Flutter Dev (Dec 2025 – Present)\n• Almond AI — Senior Flutter Dev (Mar 2024 – Nov 2025)\n• Codewire Tech — Senior Flutter Dev (Sep 2022 – Feb 2024)\n• Soumya Technology — Junior Flutter Dev (Jan 2021 – Sep 2022)",
-    followUps: ['What does he do at OneTick?', 'What projects has he built?', 'What is his stack?'],
+      "5+ years of experience across five companies:\n\n• Samaaro — Product Engineer (Jun 2026 – Present)\n• OneTick Technology — Senior Flutter Dev (Dec 2025 – May 2026)\n• Almond AI — Senior Flutter Dev (Mar 2024 – Nov 2025)\n• Codewire Tech — Senior Flutter Dev (Sep 2022 – Feb 2024)\n• Soumya Technology — Junior Flutter Dev (Jan 2021 – Sep 2022)",
+    followUps: ['What does he do at Samaaro?', 'What projects has he built?', 'What is his stack?'],
   },
   {
     id: 'current_role',
-    keywords: ['current', 'now', 'present', 'onetick', 'currently', 'working on', 'today'],
+    keywords: ['current', 'now', 'present', 'samaaro', 'onetick', 'currently', 'working on', 'today'],
     answer: () =>
-      "Currently Senior Flutter Developer at OneTick Technology (Faridabad). He's architecting a modular Flutter app with Bloc + clean architecture, and leading a team of 3 on a high-traffic financial app — already +25% retention and +40% load-time gains.",
+      "Currently Product Engineer at Samaaro (Bengaluru) — an AI-powered event marketing platform. He ships product features end-to-end, working with design and product to take ideas from spec to production. Before that he was Senior Flutter Developer at OneTick Technology, where he led a team of 3 on a high-traffic financial app (+25% retention, +40% load-time gains).",
     followUps: ['What is his architecture approach?', 'Show me his projects', 'How to reach him?'],
   },
   {
@@ -50,7 +50,7 @@ const knowledgeBase: Intent[] = [
     id: 'bloc',
     keywords: ['bloc', 'state management', 'state-management', 'cubit'],
     answer: () =>
-      "Bloc is his primary state-management choice. He architects production apps around Bloc + clean architecture — at OneTick he cut state-related bugs by 30% with this approach. He's also comfortable with GetX and Provider when the project calls for it.",
+      "Bloc is his primary state-management choice. He architects production apps around Bloc + clean architecture — at OneTick Technology he cut state-related bugs by 30% with this approach. He's also comfortable with GetX and Provider when the project calls for it.",
     followUps: ['What is clean architecture?', 'Show me his projects', 'What about Firebase?'],
   },
   {
@@ -134,7 +134,7 @@ const knowledgeBase: Intent[] = [
     id: 'leadership',
     keywords: ['lead', 'leader', 'team', 'mentor', 'manage', 'leadership'],
     answer: () =>
-      "Yes — leads a team of 3 developers at OneTick on a high-traffic financial product, runs code reviews, mentors juniors, and drives architecture decisions. Solid in Agile/Scrum and stakeholder communication.",
+      "Yes — at OneTick Technology he led a team of 3 developers on a high-traffic financial product, ran code reviews, mentored juniors, and drove architecture decisions. Solid in Agile/Scrum and stakeholder communication.",
     followUps: ['What is his current role?', 'What about achievements?', 'Contact info?'],
   },
   {

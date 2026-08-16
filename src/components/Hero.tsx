@@ -7,7 +7,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = ['Senior Flutter Developer', 'Mobile App Architect', 'Team Lead', 'Clean Architecture Advocate'];
+  const roles = ['Product Engineer', 'Mobile App Architect', 'Team Lead', 'Clean Architecture Advocate'];
 
   useEffect(() => {
     const id = setInterval(() => setCurrentRole((p) => (p + 1) % roles.length), 2800);
@@ -48,7 +48,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
             </div>
 
             <p className="mt-8 text-base md:text-lg text-fg-muted max-w-xl leading-relaxed animate-fade-in-up animation-delay-400">
-              Rahul Verma — Senior Flutter Developer with <span className="text-fg">5+ years</span>
+              Rahul Verma — Product Engineer with <span className="text-fg">5+ years</span>
               {' '}delivering high-performance mobile apps. I architect with Bloc and
               clean code, integrate Firebase end-to-end, and ship work that holds up in production.
             </p>
@@ -103,9 +103,9 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
                     </span>
                   </div>
                   <p className="text-fg font-heading text-xl leading-snug">
-                    Senior Flutter Developer at <span className="text-accent">OneTick Technology</span>
+                    Product Engineer at <span className="text-accent">Samaaro</span>
                   </p>
-                  <p className="text-fg-muted text-sm mt-2">Faridabad · Dec 2025 → Present</p>
+                  <p className="text-fg-muted text-sm mt-2">Bengaluru · Jun 2026 → Present</p>
                 </div>
 
                 <div className="bg-bg-elev border border-border rounded-2xl p-5 hover-lift hover:border-accent/40">

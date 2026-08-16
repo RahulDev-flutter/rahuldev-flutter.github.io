@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-fg-muted max-w-md leading-relaxed">
-              Senior Flutter Developer building high-performance mobile apps with
+              Product Engineer building high-performance mobile apps with
               clean architecture, Bloc, and Firebase.
             </p>
             <button
